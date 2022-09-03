@@ -1,0 +1,44 @@
+<h1>Flight Search</h1>
+
+<div class="form-group">
+  <label>From:</label>
+  <!-- two-way binding -->
+  <input [(ngModel)]="from" class="form-control">
+</div>
+
+<div class="form-group">
+  <label>To:</label>
+  <!-- two-way binding -->
+  <input [(ngModel)]="to" class="form-control">
+</div>
+
+
+<!-- property-bindings/one-way binding: [disabled]
+  Event-binding: (click)
+  Is at least one property empty? -->
+<div>
+  <button class="btn btn-default" (click)="search()" [disabled]="!from || !to">
+    Search
+  </button>
+</div>
+
+
+<table class="table table-striped">
+
+  <tr *ngFor="let flight of flights" [ngClass]="{ 'active': flight === selectedFlight }">
+
+    <td>{{ flight.id }}</td>
+    <td>{{ flight.from }}</td>
+    <td>{{ flight.to }}</td>
+
+    <!-- pipe: update value during binding -->
+    <td>{{flight.date | date:'dd.MM.yyyy HH:mm'}}</td>
+
+    <!-- event-binding: call select method -->
+    <td><a (click)="select(flight)">Select</a></td>
+  </tr>
+</table>
+
+<!-- json-pipe: convert object to json representation -->
+<b>Basket</b>
+<pre>{{ selectedFlight | json }}</pre>
