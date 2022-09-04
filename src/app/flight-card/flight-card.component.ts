@@ -23,5 +23,4 @@ export class FlightCardComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
