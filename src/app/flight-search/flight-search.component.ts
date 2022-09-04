@@ -10,10 +10,17 @@ import { Flight } from '../flight';
 })
 export class FlightSearchComponent implements OnInit {
   // default values
-  from = 'München';
-  to = 'Tokio';
+  from = 'Hamburg';
+  to = 'Graz';
   flights: Array<Flight> = [];
   selectedFlight: Flight | null = null; // initial value null
+
+  // basket dictionary
+  basket: { [key: number]: boolean } = {
+    3: true,
+    5: true,
+  };
+ //const inBasket = this.basket[7];
 
   // get HttpClient using Dependency Injection
   constructor(private http: HttpClient) {}
