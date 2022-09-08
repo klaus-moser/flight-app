@@ -10,6 +10,7 @@ import { FlightSearchComponent } from './flight-search/flight-search.component';
 import { FlightCardComponent } from './flight-card/flight-card.component';
 import { HomeComponent } from './home/home.component';
 import { PassengerSearchComponent } from './passenger-search/passenger-search.component';
+import { FlightEditComponent } from './flight-edit/flight-edit.component';
 
 @NgModule({
    imports: [
@@ -24,7 +25,8 @@ import { PassengerSearchComponent } from './passenger-search/passenger-search.co
       FlightSearchComponent,
       FlightCardComponent,
       HomeComponent,
-      PassengerSearchComponent
+      PassengerSearchComponent,
+      FlightEditComponent
    ],
    providers: [],
    bootstrap: [
