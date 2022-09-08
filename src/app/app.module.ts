@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { FlightSearchComponent } from './flight-search/flight-search.component';
 import { FlightCardComponent } from './flight-card/flight-card.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
    imports: [
@@ -20,7 +21,8 @@ import { FlightCardComponent } from './flight-card/flight-card.component';
       SidebarComponent,
       NavbarComponent,
       FlightSearchComponent,
-      FlightCardComponent
+      FlightCardComponent,
+      HomeComponent
    ],
    providers: [],
    bootstrap: [
